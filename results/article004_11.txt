@@ -1,0 +1,2 @@
+. A, B and C show the metabolism of MH after incubation with the HLMs, CYP1A2 and CYP2C19. The kinetic plots indicated that the  and  values were 10.31.3 M and 99.13.3 nmol/mg protein/min for the HLMs, 8.01.6 M and 112.45.7 nmol/nmol P450/min for CYP1A2, 25.96.6 M and 134.312.4 nmol/nmol P450/min for CYP2C19, respectively. The  values of MH in the HLMs, CYP1A2 and CYP2C19 were 9.7 mL/mg proteinmin, 14.1 mL/nmol P450min and 5.2 mL/nmol P450min, respectively.
+

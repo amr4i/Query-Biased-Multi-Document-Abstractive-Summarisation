@@ -1,0 +1,4 @@
+510 PC3 cells were plated on sterile 18-mm glass coverslips. Cells were cultured with CFS-1686 or CPT for 12 hours in the presence of CPT or CFS-1686, fixed in methanol (-20C, 10 min) and perforated with 0.1% triton 100 (25C, 2 min). Cells were blocked in 3% bovine serum albumin-TBS and then stained with primary H2AX monoclonal antibody followed by secondary antibodies with fluorophores 488 nm or 555 nm (Invitrogen). The coverslips were mounted with anti-fade reagent with DAPI (Invitrogen) upside down on glass slides. The images were obtained using confocal microscope (ZEISS) and amplified 63 and 150 times.
+
+The production of human Top1 proteins was carried out using a baculoviral expression system in Sf-9 insect cells. The detailed methods for protein production and purification were described previously .
+

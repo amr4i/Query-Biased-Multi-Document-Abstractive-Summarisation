@@ -1,0 +1,2 @@
+We applied Bayesian methods to analyse the data. The benefits from using Bayesian analysis are that we can explicitly and transparently state our assumptions and uncertainties about the phenomenon and data in probabilistic form. The results of an analysis are posterior distributions which provide estimates for the by-catch and model parameters and describe the uncertainty in them.
+

@@ -1,0 +1,2 @@
+Given the unusual oligomeric structure of Cpn10(1), it was pertinent to examine whether this dimeric co-chaperonin was able to assist chaperonin in mediating the refolding of denatured protein. As can be seen in , Cpn20 was functional at assisting both GroEL and chloroplast chaperonin in refolding urea-denatured MDH. In contrast, Cpn10(1) was not able to assist chaperonins in mediating protein folding. This result was surprising, given its high homology to Cpn10(2), which was fully functional with GroEL .
+

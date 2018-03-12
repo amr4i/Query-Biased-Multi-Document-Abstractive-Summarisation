@@ -1,0 +1,2 @@
+In conclusion, membrane filtration in combination with EMA-qPCR seems to be a promising method for the detection and differentiation of viable  cells in tap water samples. However, further studies including an EMA-qPCR analysis of live/dead mixtures of bacterial cells and of higher numbers of field isolates are needed to validate the method.
+

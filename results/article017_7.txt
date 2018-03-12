@@ -1,0 +1,2 @@
+To harvest the cells, they were washed with 1 phosphate buffered saline (PBS) and lysed with 0.1 M K-phosphate buffer pH 7.8 containing 0.2% Triton X-100. Lysed cells were assayed for luc activity using a buffer containing 100 mM Tris-HCl pH 7.8, 15 mM MgSO, 10 mM ATP, and 65 M luciferin. -Gal activity was assayed using the Tropix Galacto-light assay (Applied Biosystems, Foster City, CA), according to the manufacturer's protocol. Both assays were measured using a Veritas Microplate Luminometer (Promega, Madison, WI).
+

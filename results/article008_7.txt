@@ -1,0 +1,2 @@
+Chen's method makes it easy to automate the calculation of signal limits. In our experience, Chen's method is also simpler to understand and teach, and counting crossings is easier for most people than counting runs.
+

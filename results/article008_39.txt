@@ -1,0 +1,2 @@
+However, getting baseline data beforehand is not always possible in reality. Often improvement programmes are initiated without available baseline data, and waiting for baseline data may even be unethical. In those situations, measurements start together with the improvement initiative. This is not necessarily a problem, as any significant effect will show itself as non-random variation relatively quickly, as demonstrated in the simulation study. Perla provides useful guidance on sampling considerations in ongoing improvement work .
+

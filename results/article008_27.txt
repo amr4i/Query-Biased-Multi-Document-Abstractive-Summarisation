@@ -1,0 +1,4 @@
+This simulation study shows that the suggested shift and crossings rules are effective in detecting moderate to large shifts and drifts in process level over time while keeping the false signal rate constant around 5% and independent of the number of data points in the chart.
+
+The trend rule is performing so poorly compared to the other rules, that we question its appropriateness.
+

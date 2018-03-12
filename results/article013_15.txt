@@ -1,0 +1,4 @@
+RAW264.7 cells (DS Pharma Biomedical Co., Ltd., Osaka, Japan) were cultured in DMEM containing 10% fetal bovine serum (FBS; Invitrogen, Carlsbad, CA, USA) and Antibiotic Antimycotic Solution (Sigma-Aldrich).
+
+Gentiopicroside, swertiamarin or gentiolactone were separated on an InertSustain ODS-3 column (2.0 mm dia. 150 mm; GL Science Inc.) with gradient elution of 10 mM ammonium acetate (pH 7.8) and MeOH (10 to 40% of MeOH in 30 min) at a flow rate of 0.2 mL/min. Compounds were identified and quantified by LC-TOFMS (Agilent Technologies, Palo Alto, CA, USA) using Agilent Mass Hunter Workstation Software. Quantitative accuracy was verified with known concentrations of reference standard compounds.
+

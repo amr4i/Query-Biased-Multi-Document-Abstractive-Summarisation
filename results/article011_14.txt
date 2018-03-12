@@ -1,0 +1,4 @@
+We next asked if CFS-1686-induced DNA damage can lead cells toward apoptosis, by measuring the activation of caspase 3 and the degradation of PARP. Clearly, like CPT, CFS-1686 could efficiently activate caspase 3 to further cleavage of PARP (). Interestingly, the degree of cellular apoptosis induced by CFS-1686 and CPT exactly matched their respective capacity for DNA damage.
+
+We performed DNA relaxation assays to ask if CFS-1686 affects Top1 to relax the supercoiling form of DNA. As shown in , we demonstrated that CFS-1686 had high potency to inhibit Top1 DNA relaxation activity. CPT could inhibit Top1 DNA relaxation activity at around 250 M, but we did not observe any effect at 125 M (). In contrast, CFS-1686 caused inhibition at concentrations as low as 62.5 M, about 4-fold more potent than CPT ().
+

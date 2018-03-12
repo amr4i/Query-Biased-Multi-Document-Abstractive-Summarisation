@@ -1,0 +1,2 @@
+PC3 cells were purchased from the Bioresource Collection and Research Center (BCRC) in Taiwan. The cells were seeded at 510 cells/per plate (10 cm) in RPMI 1640 with 10% fetal bovine serum. For synchronization, thymidine was added to 2 mM after 12 hr and incubated for another 16 hours. The cells were released by washing three times with PBS and re-fed with fresh serum-rich medium for 8 hours. Then cells were re-fed with fresh media containing 2 mM thymidine for 16 hours. The cells were washed by PBS three times before subsequent steps.
+

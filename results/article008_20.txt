@@ -1,0 +1,4 @@
+Prediction limits for shifts and crossings in run charts with 10 to 100 data points are tabulated in . A trend was signalled if the p-value calculated using formula 6 in Olmstead's paper was less than 0.05 .
+
+For comparison, we also studied the , which is used with Shewhart control charts. The three-sigma signal is triggered when any data point is further than 3 standard deviations away from the overall process average . Since simulation data were created from a standard normal distribution with a known mean of 0 and a standard deviation of 1, we used +/ 3 as sigma limits.
+

@@ -1,0 +1,2 @@
+The inhibitory effects of multiple concentrations of MH (0.5100 M) on the activity of each CYP isoform determined by the metabolism of a single concentration of isoform-specific probe were tested with the HLMs (or expressed CYPs, when needed). MH showed potent inhibition of CYP1A2 (phenacetin O-deethylation) and CYP2C19 (S-mephenytoin 4-hydroxylation), with  of 4.30 M and 23.45 M, respectively. The inhibitory effect of MH on the activity of CYP2A6, CYP2C9, CYP2D6, CYP2E1 and CYP3A4 was negligible ().
+

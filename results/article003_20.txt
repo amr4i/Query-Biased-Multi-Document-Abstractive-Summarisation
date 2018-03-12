@@ -1,0 +1,2 @@
+The subcellular locations of the 99 proteins were further predicated by TargetP, which demonstrated that 37 proteins function in the secretory pathway, suggesting that secreted proteins are important for banana wilt. The predominant proportion fell into the other location category or could not be assigned to a location, which is similar to what was observed in the GO-cellular component classifications ().
+

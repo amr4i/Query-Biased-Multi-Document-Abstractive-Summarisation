@@ -1,0 +1,4 @@
+Although the trend rule has been shown to be ineffective , it is still widely used in health care.
+
+Willemain has suggested a type of runs analysis using , which is a metric based on lengths of adjacent runs. However, this method is only appropriate in data rich environments with, say, thousands of observations per day, which is rarely the case in health care .
+

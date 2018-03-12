@@ -1,0 +1,2 @@
+An alternative mechanism that we evaluated was the potential inhibition of cyclooxygenase enzymes COX-1 or COX-2. Our findings indicate that, while paracetamol inhibited COX-2 with an IC of 7.081.62 mM, compound  did not affect the enzymatic activity at 10 mM. This result implies that inhibition of COX enzymes does not underlie the  analgesic activity of compound .
+

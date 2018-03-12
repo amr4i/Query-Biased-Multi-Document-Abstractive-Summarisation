@@ -1,0 +1,2 @@
+The control of  Pdu MCP formation is an important step towards engineering MCP-based biotechnological tools. To aid in characterizing Pdu MCP regulation, we constructed a fluorescence-based transcriptional reporter plasmid to measure activation of the P promoter, and use this technique in conjunction with fluorescence microscopy and TEM to investigate the regulation that underlies MCP formation.
+

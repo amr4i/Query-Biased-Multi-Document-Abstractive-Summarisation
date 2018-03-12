@@ -1,0 +1,2 @@
+The posterior inference was then conducted for the parameters and population parameters. The hierarchical prior allowed us to predict, based on the posterior of the population parameters, the catchability in sub-areas F3 and S3, where interviews were not made. Since we had effort data for these sub-areas we could calculate the posterior predictive distribution of the by-catch there as well. We approximated the posterior distributions of model parameters with Markov chain Monte Carlo using the Metropolis-Hastings algorithm .
+

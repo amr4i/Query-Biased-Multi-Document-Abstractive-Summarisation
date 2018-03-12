@@ -1,0 +1,4 @@
+Bacteria were viewed using a Nikon Ni-U upright microscope with a 100x, 1.45 n.a. plan apochromat objective. Images were captured using an Andor Clara-Lite digital camera. Fluorescence images were collected using a C-FL Endow GFP HYQ band pass filter.
+
+The MCP purification protocol was performed by lysis and centrifugation as previously described .
+

@@ -1,0 +1,2 @@
+The EndoZyme and EndoLISA endotoxin detection assays were purchased from Hyglos GmbH, Bernried am Starnberger See, Germany and performed according to the manufacturer's instructions. Fluorescence was measured using a Tecan Infinite 200 Pro microplate reader. The sensitivity setting (gain) of the fluorescence reader was adjusted by performing the assays one time at automatically detected optimal gain at the 90 min timepoint. This gain setting was then used throughout all further experiments. Standard curves were calculated using a non-linear regression model.
+

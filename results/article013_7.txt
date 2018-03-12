@@ -1,0 +1,2 @@
+We hypothesized that gentiolactone might interfere with the transcriptional activity of NF-B. To test this hypothesis, we investigated NF-B transcriptional activity using the renilla luciferase reporter (hRLuc) gene driven by an NF-B dependent promoter. We transfected the pNF-B RE-TK hRluc(F) vector into RAW264.7 cells. At 24 hours after transfection, we added LPS (1 g/mL) and gentiolactone (500 M) and measured hRluc activity. The hRluc activity induced by LPS was significantly decreased in the presence of gentiolactone ().
+

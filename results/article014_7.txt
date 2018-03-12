@@ -1,0 +1,2 @@
+Cpn602 (At2g28000) cloning and purification was based on the Cpn602 method  with the following adaptation: Cpn602 was cloned between the BamHI-NotI sites of the modified version of pET21d+ which codes for an octa-histidine tag followed by the TEV (Tobacco Etch virus) proteolysis site at the amino terminus of the protein . The first amino acid of the mature protein was chosen to be alanine 46 and it contained an additional glycine-serine at the N-terminus. The construct was expressed in  Rosetta (Novagen) and purified as described in .
+

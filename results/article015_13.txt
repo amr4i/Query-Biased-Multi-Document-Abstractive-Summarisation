@@ -1,0 +1,2 @@
+Baltic grey seals are counted annually during their peak moulting time in early summer. The population is increasing and in 2012 there were 28255 counted individuals . Hiby et al.  estimated that the proportion of counted individuals is 70%85% of the total population. Hence, it is reasonable to assume that the number of counted seals is a conservative minimum and 28255/0.740000, an optimistic maximum estimate of  the total number of seals that survived other mortalities than by-catch in 2012. We encoded these assumptions by a log-Gaussian prior
+

@@ -1,0 +1,2 @@
+Because annotation files representing surface parcellations typically only cover the cortical surface, in order to specify the locations of subcortical structures, a segmentation file can additionally be specified. The segmentation file is an MRI volume with specific hard-coded values to indicate the locations of numerous cortical and subcortical strutures. Segmentation is done using FreeSurfer  and the segmentation file can be provided in native FreeSurfer or other imaging formats such as NIFTI.
+

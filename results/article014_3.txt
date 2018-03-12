@@ -1,0 +1,2 @@
+In the present work, we show that, despite the high similarity to Cpn10(2) at the primary sequence level, Cpn10(1) exhibits unique structural properties and is functional only when it is integrated into a hetero-oligomeric complex with Cpn20. Mixtures of Cpn10 and Cpn20 contain hetero-oligomeric species that co-exist together with Cpn20 homo-oligomers, increasing complexity and flexibility of the chloroplast chaperonin system.
+

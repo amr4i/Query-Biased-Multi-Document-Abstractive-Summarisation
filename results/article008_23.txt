@@ -1,0 +1,2 @@
+For example, when a shift in process mean of 1 standard deviation is present, approximately 70% and 60% of run charts with 20 data points will signal the shift and crossings rules respectively. If the shift is more than 1.5 standard deviation, over 90% of run charts with 20 data points detect the change.
+

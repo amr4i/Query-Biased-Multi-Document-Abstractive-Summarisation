@@ -1,0 +1,2 @@
+Crossings rule: A crossings signal is present if the number of times the graph crosses the median is smaller than the prediction limit.
+

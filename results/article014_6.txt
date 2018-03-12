@@ -1,0 +1,4 @@
+Previously published protocols were used to purify GroES, Cpn20, G32A, Cpn10(2)  and mouse mt-cpn10 .
+
+Previously published protocols were used to purify Cpn603 (At1g55490)  and GroEL .
+

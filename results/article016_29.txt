@@ -1,0 +1,2 @@
+CVU is cross-platform software. CVU has been tested and runs on Linux, Mac OS X, and Windows. Almost all features in CVU are fully functional across platforms; however, creating movies from the 3D brain is only possible on Linux and Mac OS X systems running the X window system.
+

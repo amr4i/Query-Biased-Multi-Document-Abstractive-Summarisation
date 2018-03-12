@@ -1,0 +1,8 @@
+Risk of bias was estimated for each study according to a modified Jadad scale adapted for basic science . Risk of bias was then summarized according to the GRADE framework , .
+
+The primary outcome measured was mean log declines in RNA stability beyond recommended time and temperature thresholds, with significant declines in RNA stability reported as a secondary outcome. Data was analyzed by mean VL differences at different temperature thresholds. Mean and standard errors were calculated from median and range when not otherwise provided . When not provided in the study, standard deviation of the difference in means was imputed using the Cochrane Handbook methodology and the coefficients of correlation provided among the included studies . Corresponding authors were contacted for any additional information needed.
+
+A viral degradation cutoff of > 0.5 log copies/mL was used to define clinical significance, consistent with the literature , . Figures were developed to chart RNA stability over time by transport type at specific temperature thresholds, with lines of best fit generated using Stata 13.
+
+The database search yielded 10,716 unique titles (); 60 articles were reviewed in full text and nine studies were taken through for review. Characteristics of selected studies are outlined in .
+

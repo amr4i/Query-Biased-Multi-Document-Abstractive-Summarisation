@@ -1,0 +1,4 @@
+RAW264.7 cells were seeded in 48-well culture plates (110 cells/well) and cultured overnight. Then, the cells were cultured in DMEM containing 10% FBS and LPS (1 g/mL) with gentiolactone for 1 hour. Nuclear proteins were extracted using an NE-PER Nuclear and Cytoplasmic Extraction Kit (Thermo). A biotin-labeled oligonucleotide (5 -AGTTGAGGGGACTTTCCCAGGC- 3) was incubated with 20 g of nuclear extract at room temperature for 30 min. We used the LightShift Chemiluminescent EMSA Kit (Thermo) and followed the manufacturers' recommendations.
+
+Statistical differences among experimental groups were evaluated by one-way ANOVA and Tukey's post-hoc test. Values are expressed as the mean  S.D.
+

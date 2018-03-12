@@ -1,0 +1,2 @@
+As a consequence, we suggest always studying process data with run charts before applying control charts. If a run chart identifies non-random variation, it could mean many things including a lack of independence in the data, which would invalidate the control chart.
+

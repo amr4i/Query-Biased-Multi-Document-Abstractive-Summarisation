@@ -1,0 +1,2 @@
+CVU depends extensively on other tools written in python. For interactive 3D visualization, CVU depends on the Mayavi library . For 2D interactive plotting, CVU uses the chaco () and matplotlib  libraries. The GUI is written using the traitsui framework () and supports both the Qt and wxwidgets toolkits.
+

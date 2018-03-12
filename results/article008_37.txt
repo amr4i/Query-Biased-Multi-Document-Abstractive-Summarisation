@@ -1,0 +1,2 @@
+For basic Shewhart control charts, we suggest combining the sigma test with the runs and crossings tests using the mean as reference rather than using a fixed limit for longest run, which would be the traditional approach.
+

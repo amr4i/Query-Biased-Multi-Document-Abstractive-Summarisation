@@ -1,0 +1,2 @@
+The outcome from each simulation was the proportion of run charts which triggered the rule, that is, the simulated power of the test with respect to detection of the shift under study.
+

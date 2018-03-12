@@ -1,0 +1,4 @@
+Despite the benefits of VL testing, HIV RNA sample transport constraints limit testing access in resource-limited settings. It is estimated that only 20% of people on antiretroviral treatment (ART) in Africa access routine VL testing .
+
+For VL testing, samples may be shipped to the laboratory as whole blood, plasma, or dried blood or plasma spots (DBS/DPS), depending on the resources available. Optimizing sample collection options depends on the trade-offs between test accuracy and logistical capacity.
+

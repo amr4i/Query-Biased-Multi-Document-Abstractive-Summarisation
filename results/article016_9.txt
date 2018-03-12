@@ -1,0 +1,4 @@
+Human brain networks in CVU are represented by two main components: an  and its accompanying .
+
+In CVU, complex networks are represented internally as adjacency matrices. These matrices can be specified as any one of a variety of common matrix formats, including MATLAB (The Mathworks, Natick MA) and numpy  formats, as well as plain text files. Most work on human brain networks has focused on undirected (symmetric) connectivity  for simplicity, in current versions of CVU, all networks are represented as undirected.
+

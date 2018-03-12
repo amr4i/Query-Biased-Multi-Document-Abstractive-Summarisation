@@ -1,0 +1,2 @@
+Cpn10(1) lacking the N-terminal chloroplast transit peptide was cloned into the pET22b vector between Xho and Nde restriction enzymes and transformed into the  BL21(T7). Serine 43 was chosen as the first amino acid, based on alignment with Cpn10(2) .
+

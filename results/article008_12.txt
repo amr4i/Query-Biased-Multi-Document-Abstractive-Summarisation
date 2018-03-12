@@ -1,0 +1,2 @@
+In addition to the above mentioned rules, it is recommended also to look for other unnatural patterns in data that may indicate the presence of non-random variation. These patterns may include cyclic behaviour or obviously different data points.
+

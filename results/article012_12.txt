@@ -1,0 +1,4 @@
+The phenotype of -deficient piglets is shown in . Unlike wild-type Duroc piglets, which have a dark brown coat (), -deficient piglets exhibited hypopigmentation ().
+
+We used FACS to analyze differentiated lymphocyte populations among PBMCs using an anti-porcine CD3 antibody for mature T cells and an anti-human CD19 antibody for Immunoglobulin M (IgM)-positive B cells. The anti-human CD19 antibody used in FACS analysis reacted with porcine B cells. Wild-type () piglets possessed more than 30% CD3-positive T cells and 45% IgM-positive B cells among their PBMCs (). In contrast, CD3-positive T cells and IgM-positive B cells were not present (<1%) in  piglets. Therefore,  deficiency prevents the differentiation of lymphocytes and causes a lack of IgM-positive B and mature T lymphocytes in pigs.
+

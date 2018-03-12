@@ -1,0 +1,2 @@
+shows that when no shift is present in the data, the (false) signal rates for the shift and crossings rules suggested in this paper are approximately 5% and independent of the number of data points in the run chart. The (true) signal rates increase when shifts are introduced in the data. The larger the shift, the quicker the run charts pick up the signal.
+

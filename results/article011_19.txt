@@ -1,0 +1,2 @@
+In summary, the current study has identified a novel catalytic inhibitor of Top1, CFS-1686, which can induce cell cycle arrest at the intra-S phase and cause DNA damage in PC3 cells. Our docking strategy further deciphered its mode of action by direct contact with essential amino acids of Top1, including Lys364, Lys439 and Tyr723 located at the interface of the DNA-Top1 interaction, to inhibit relaxation of Top1 upon DNA replication.
+

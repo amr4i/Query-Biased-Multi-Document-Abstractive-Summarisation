@@ -1,0 +1,4 @@
+Serotonergic neurons are characterized by Tryptophan hydroxylase expression, the rate-limiting enzyme in neurotransmitter synthesis. In zebrafish two genes encoding Tryptophan hydroxylase,  and , have been identified and their expression analyzed , .  is a marker for serotonergic neurons in the raphe nucleus and epiphysis. The analysis of  and  expression in  mutant embryos did not reveal any significant differences in expression compared to wild-type siblings. ( and data not shown).
+
+In summary, we conclude that different neuronal cell types are differentially affected in  mutant embryos: While serotonergic () neurons form normally, CRH and dopaminergic neurons in selected anatomical areas are enhanced in number, and  WISH signal appears enhanced in oxytocinergic neurons.
+

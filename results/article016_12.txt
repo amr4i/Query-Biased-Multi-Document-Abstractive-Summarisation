@@ -1,0 +1,2 @@
+The identity of the ROIs in the matrices is determined by plaintext  which accompany data in CVU. Ordering files are text files with one ROI name on each line. The first row and column of the matrix correspond to the region listed on line 1 of the corresponding ordering file, and so on. The location of the ROI in anatomical space is then determined by identifying the same node as specified in the parcellation. If the ROI name corresponds to a predefined set of subcortical structures, its location is determined by examining the segmentation file instead.
+

@@ -1,0 +1,4 @@
+We analyzed whether also other neuronal cell types in addition to DA cells were affected in  mutants. We focused on neurons in the hypothalamus with regulatory links to dopaminergic specification. The transcription factors Sim1 and Otp have been shown to be required for the development of dopamine, CRH, and Oxytocin secreting neurons in mammals ,  and zebrafish , , , . In addition we analyzed serotonergic neurons for comparison.
+
+Oxtl/Isotocin is the homolog of oxytocin In zebrafish .  neurons have been shown to form in two distinct areas in the preoptic region of the hypothalamus . The comparison of  mutant embryos and wild-type siblings and mutants revealed that the  expression pattern is not altered at 3 dpf in mutant embryos, but the WISH signal was slightly darker (; p = 0.016).
+

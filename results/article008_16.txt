@@ -1,0 +1,2 @@
+For the study on the effect of shifts in process mean, the program did 1000 simulations of each run chart of length 2 to 100 with samples from a normal distribution with a standard deviation of 1 and distribution mean of 0.0, 0.5, 1.0, 1.5, and 2.0 respectively. In addition, the run charts with sample mean of zero was analysed with both a fixed median of 0 and with a floating median defined as the actual median of the numbers in the run chart. All other analyses were done with a fixed median of 0.
+

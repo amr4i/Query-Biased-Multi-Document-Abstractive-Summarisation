@@ -1,0 +1,2 @@
+When using a fixed median, as in our simulation programme, and in the example in , we assume that the median is established from baseline data before any improvement initiative is undertaken. This is, of course, the optimal situation. Baseline data may provide important information on trends and patterns, e.g. autocorrelation, already present in the process, which may be useful in guiding the improvement work .
+

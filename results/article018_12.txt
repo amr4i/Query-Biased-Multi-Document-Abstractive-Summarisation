@@ -1,0 +1,6 @@
+Primer sequences:
+
+Human IL-1 sense 5-GTA CCT GAG CTC GCC AGT GA-3 and anti-sense .
+
+Human RPLP0 sense  and anti-sense .
+

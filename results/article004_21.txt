@@ -1,0 +1,2 @@
+In conclusion, our results show that MH was simultaneously a substrate and an inhibitor of CYP1A2 and CYP2C9, and MH had the potential to perpetrate drug-drug interactions with other CYP1A2 and CYP2C19 substrates. Because CYP1A2 and CYP2C19 are polymorphic enzymes, the drug interactions between MH and the substrates of these enzymes should be considered during future experiments.
+

@@ -1,0 +1,4 @@
+The degree of blockage (%) of TRP channel activity was calculated by:
+
+Where:
+

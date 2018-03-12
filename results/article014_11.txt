@@ -1,0 +1,2 @@
+The reconstitution reaction was carried out in 50 mM Tris-HCl pH 8, 0.3 M NaCl, 10 mM MgCl, 16 mM KCl, 2 mM dithiothreitol (DTT), 5 mM ATP, 50 M Cpn601 monomer and 25 M of different co-chaperonins or co-chaperonin mixtures. The reconstitution mixture was incubated for 5 minutes at room temperature and then for 1 hour at 30C. 3 l of the reconstitution reaction was loaded on a 6% native polyacrylamide gel.
+

@@ -1,0 +1,2 @@
+CVU is a software package for the visualization and network analysis of human brain connectivity data, but does not itself perform the connectivity estimation. To use CVU, it is necessary to first have some connectivity data. In this section, we describe some strategies for creating connectomes, and describe some other software packages which perform the connectivity estimation which can subsequently be used by CVU.
+

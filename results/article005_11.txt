@@ -1,0 +1,2 @@
+The number of combinations generated, herein referred to as expression states, is equal to  = , where  and  are the number of reversible and irreversible reactions respectively that are targeted by Constrictor ().
+

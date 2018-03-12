@@ -1,0 +1,2 @@
+The identified proteins were further searched against UniProt () to confirm their functions. These proteins were further divided into different groups by the Functional Catalogue software () to obtain their corresponding COG (Cluster of Orthologous Groups of proteins) codes. Then, gene ontology (GO) pathway analysis was performed with Blast2-GO software (). Functional classifications of the identified proteins from the different races are provided in .
+

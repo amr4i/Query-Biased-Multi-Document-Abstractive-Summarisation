@@ -1,0 +1,2 @@
+Previous studies report that induction of the  operon requires growth on a poor carbon source because glucose mediates the repression of the P promoter by repressing transcription of P via the Crp global regulatory system , . We confirmed that the P promoter is not activated in  grown in media containing glucose using flow cytometry with the P-GFP transcriptional reporter.  harboring this fluorescent reporter showed no shift in fluorescence upon addition of 1,2-PD when grown in the presence of 20 mM glucose (see Fig. S4 in ).
+

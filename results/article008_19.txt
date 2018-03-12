@@ -1,0 +1,2 @@
+Trend rule: A trend is present if the longest run of data points going up or down is longer than the prediction limit.
+

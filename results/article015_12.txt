@@ -1,0 +1,2 @@
+We gave a hierarchical prior for the catch-abilities, ), and number of seals, , and calculated their posterior distribution using the Bayes rule
+

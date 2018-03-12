@@ -1,0 +1,4 @@
+When combining the shift and crossings rules so that a signal is considered present if either the shift or the crossings rule is triggered, the sensitivity to shifts in data increased at the cost of a slightly elevated false signal rate (results not shown).
+
+The three-sigma rule is less sensitive to shifts up to 2 standard deviations than the shift and crossings rules and shows an increasing false signal rate as the number of data points increases. At 40 data points the false signal rate is around 10%. It should be noted that, in practice, it is common to adjust the sigma limits to the number of data points to achieve a fixed false signal rate.
+

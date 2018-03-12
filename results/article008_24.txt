@@ -1,0 +1,2 @@
+The shift rule has a slightly higher signal rate with a fixed median compared to a floating median. The difference levels out as the number of data points increases.
+

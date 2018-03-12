@@ -1,0 +1,2 @@
+The total by-catch by trap and gill net fisheries in our study area was, with 90% probability, more than 1240 but less than 2860, and the posterior median and mean were 1550 and 1880 seals respectively. The posterior distribution was highly right skewed () and the 80% quantile of the total by-catch was 2130. With 90% probability, the total by-catch with trap nets was more than 1100 but less than 2600, and that of gill nets more than 70 but less than 410. The posterior mean of the proportion of by-catch with trap nets from the total by-catch was 88%.
+

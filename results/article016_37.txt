@@ -1,0 +1,2 @@
+Much work on the human connectome has focused on structural connectivity, using diffusion MRI to characterize the white matter connections , .
+

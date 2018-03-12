@@ -1,0 +1,4 @@
+is the fluorescence after the addition of agonist in the presence of the compound,
+
+is the fluorescence before the addition of agonist in the presence of the compound,
+
