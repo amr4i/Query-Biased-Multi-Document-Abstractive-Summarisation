@@ -1,2 +1,0 @@
-Apparently, both CPT and CFS cause DNA damage, resulting in activation of ATM to trigger DNA damage repair. The main differences between CFS and CPT were in the timing of the DNA damage and the levels of damage. We speculated that CFS-1686 might, like CPT, interact with Top1, but in a different way, with different results for this DNA topology enzyme.
-

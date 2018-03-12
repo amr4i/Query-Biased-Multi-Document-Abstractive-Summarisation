@@ -1,2 +1,0 @@
-To our knowledge, this study is the first to study the performance of run charts under simulated shifts and drift in process mean.
-

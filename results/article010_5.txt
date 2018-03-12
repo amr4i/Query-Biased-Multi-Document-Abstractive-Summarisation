@@ -1,2 +1,0 @@
-All obtained data were categorized according to where and which season they were collected. Further statistical analysis including mean/variance, Pearson correlation and linear fits were calculated in the statistical package of Matlab 2013b software. Then, ion balance was used to evaluate the acid-base balance of the aerosol particles. We converted the ion concentration by mass into micro-equivalents, as follows:
-

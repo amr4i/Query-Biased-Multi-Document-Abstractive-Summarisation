@@ -1,2 +1,0 @@
-Next, we purified MCPs from  expressing the encapsulation reporter PduP-GFP. When viewed by transmission electron microscopy (TEM), these purified MCPs appeared morphologically similar to purified Pdu MCPs previously reported in literature , ,  (). Furthermore, an SDS-PAGE gel of purified MCPs showed a similar banding pattern to those previously reported in literature , ,  and an anti-GFP western blot indicated the presence of GFP in purified MCPs ().
-

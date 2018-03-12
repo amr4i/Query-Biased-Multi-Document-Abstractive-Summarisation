@@ -1,2 +1,0 @@
-To gain insight into the functions of these proteins, we further searched for their homologues with BLAST-P using the protein sequences as queries and/or searched the identified NCBI accession numbers against the UniProt database. A substantial number of spots were identified as protein isoforms or protein homologs, indicating that post-translation modifications (PTMs) are of significant importance for . Further research may focus on uncovering the detailed functions of the isomeric forms and PTMs such as oxidation and phosphorylation.
-

@@ -1,2 +1,0 @@
-More recently, the study of complex brain networks by analysis of graph theoretical properties has become exceptionally popular. In addition to small-world organization, whole brain networks have shown various nontrivial properties, including scale-free distribution , rich-club organization  and the hierarchical organization of networks on multiple scales , .
-

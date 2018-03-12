@@ -1,2 +1,0 @@
-Gentiopicroside and swertiamarin have been reported to be the major active compounds of gentian roots. We measured the concentrations of gentiopicroside and swertiamarin in 12.5 mg/mL MeOH extracts using LC/TOFMS and found 1.41 mM and 0.16 mM, respectively. On the basis of these concentrations, we set the highest concentration of gentiopicroside and swertiamarin to be tested at 1.5 mM and examined the inhibitory effects on LPS-induced TNF- expression. Neither compound showed any inhibitory effect ().
-

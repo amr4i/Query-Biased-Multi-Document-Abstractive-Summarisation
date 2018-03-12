@@ -1,2 +1,0 @@
-As described in the introduction, the murine  promoter contains multiple activin response elements including SMAD and FOXL2 binding sites (). We used 5 truncation analysis to determine which regions of the promoter were necessary for FOXO1 suppression. Both activin induction and FOXO1 suppression were lost with the 95 -luc (). These results indicate that the region between 304 and 95 is necessary for activin responsiveness as well as suppression by FOXO1 and suggest that the mechanism of suppression may involve SMAD and FOXL2 transcription factors.
-

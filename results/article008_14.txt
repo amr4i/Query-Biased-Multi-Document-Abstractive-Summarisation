@@ -1,2 +1,0 @@
-We studied the signal rates in simulated run charts with 2 to 100 data points under influence of linear drifts and non-linear shifts in the sample distribution mean.
-

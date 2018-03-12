@@ -1,2 +1,0 @@
-THP-1 cells were cultivated in RPMI 1640 medium (Sigma-Aldrich, Vienna, Austria) supplemented with 10% heat-inactivated (i.a.) fetal bovine serum (FBS; PAA, GE Healthcare, Pasching, Austria), 100 U/ml penicillin (PAA), 100 g/ml streptomycin (PAA) and 2 mM L-glutamine (Gibco, Life Technologies, Lofer, Austria).
-

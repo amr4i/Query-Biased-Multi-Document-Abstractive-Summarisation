@@ -1,2 +1,0 @@
-The final flux solution matrix, , contains  rows and  columns. Each column in  represents the solution obtained from a unique expression state.
-

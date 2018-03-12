@@ -1,2 +1,0 @@
-In order to further explore the hetero-oligomerization, we separated mixtures containing different Cpn20/Cpn10(1) ratios on a native gel. As can be seen in , upon mixing these two co-chaperonins, a new band appears above Cpn20, representing the formation of a Cpn20-Cpn10(1) hetero-oligomer. It can be seen that Cpn20 homo-oligomer never dissociates completely, even in the presence of a 10-fold molar excess of Cpn10(1). In this regard, it is also interesting to note that hetero-oligomer formation is spontaneous and does not depend on any other factors like Cpn60 or ATP.
-

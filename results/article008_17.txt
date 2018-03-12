@@ -1,6 +1,0 @@
-To study the effect of linear drift in process mean, the program did 1000 simulations of each run chart of length 2 to 100 while introducing an increase of 0.0, 0.1, 0.2, and 0.3 respectively in distribution mean between consecutive sample data points.
-
-We studied the following rules for detection of non-random variation:
-
-Shift rule: A shift is present if any run of consecutive data points on the same side of the median is longer than the prediction limit.
-

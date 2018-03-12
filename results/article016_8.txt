@@ -1,2 +1,0 @@
-CVU is an integrated application designed for the interactive visualization of human brain networks. Here we illustrate the features of CVU with sample fMRI, diffusion MRI, and MEG datasets, show the software dependencies, and suggest how to integrate CVU into an analysis workflow. The basic workflow is shown in .
-

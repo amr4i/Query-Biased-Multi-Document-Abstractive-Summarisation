@@ -1,2 +1,0 @@
-The important thing to consider before choosing the right chart is the purpose of the chart. In our experience, run charts are especially useful for determining if improvement is happening when improvement work is ongoing and baseline data are not available. In these situations, the use of control charts may, as mentioned, be inappropriate. In the last section we suggest some guidelines for the use of run charts for improvement work, and a practical example is shown in .
-

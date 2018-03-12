@@ -1,2 +1,0 @@
-It may be argued that the simulations used in our study are for a fixed number of observations, while in practice one will apply the run chart rules sequentially, deciding after each data point if non-random variation is present. However, it is our experience from using these rules in practice for several years on real life data that the rules work well in practice and offer good protection against false positive signals and are effective in detecting real change in process performance.
-

@@ -1,2 +1,0 @@
-Constrictor explores the system response for combinations of inhibitory rate adjustments (). First, the FBA linear programming problem is solved to obtain the maximum theoretical ethylene yield ():
-

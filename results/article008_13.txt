@@ -1,2 +1,0 @@
-The aim of this study was to propose a set of rules that applied together will detect process improvement or degradation as soon as possible while having a low rate of false signals when only random variation is present.
-

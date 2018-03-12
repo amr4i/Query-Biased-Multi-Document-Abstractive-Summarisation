@@ -1,2 +1,0 @@
-CVU additionally has two optional dependencies. First, the cross-platform audio/video transcoding program FFmpeg () is needed for creating movies from the 3D brain. Second, FreeSurfer is needed to define surface parcellations and create subject-specific surfaces, but is not needed to run CVU.
-

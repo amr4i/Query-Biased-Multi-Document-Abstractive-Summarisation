@@ -1,2 +1,0 @@
-The C and H NMR spectroscopy in DMSO- of the mixture of  and  is interesting. The signals were assigned taking into account that  was the major isomer (about 70%) and by means of 2D experiments. To check the assignments as well as the isomerism, we calculated the absolute shielding - (, ppm) at the GIAO/B3LYP/6-311+G(d,p) level and transform the absolute shielding into chemical shifts (, ppm, see ).
-

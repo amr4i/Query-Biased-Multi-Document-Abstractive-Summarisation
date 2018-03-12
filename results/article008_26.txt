@@ -1,2 +1,0 @@
-shows that even when a drift of 0.3 standard deviation is added to each sample data point, only about 20% of run charts with 100 data points will signal the trend rule. In contrast, the shift and crossings rules pick up the drift with almost 100% certainty already at 20 data points. Thus, the trend rule is virtually useless for detection of linear drift over time, the purpose it was intended for.
-

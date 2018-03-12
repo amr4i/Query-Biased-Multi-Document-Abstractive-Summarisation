@@ -1,2 +1,0 @@
-All cultures were grown at 37C in an orbital shaker at 225 rpm. For experiments involving gene expression from a plasmid, genes were induced at OD = 0.4 with 1.33 mM arabinose for expression of PduP-GFP from a pBAD33 plasmid, or 1 ng/mL anhydrous tetracycline (aTc) for expression of PocR from a pSC101 pTET plasmid. After five additional hours of growth, samples were taken for fluorescence microscopy, flow cytometry, or Pdu MCP purification.
-

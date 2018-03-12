@@ -1,2 +1,0 @@
-contains three co-chaperonin genes with predicted chloroplast transit peptides: Cpn20 (At5g20720), Cpn10(1) (At3g60210) and Cpn10(2) (At2g44650), the latter two of which exhibit 84% sequence identity. Cpn10(1) was not detected in proteomics studies, although, mRNA analyses demonstrate that this gene is expressed at low levels . In contrast, Cpn20 and Cpn10(2) were both detected at the mRNA level, identified in proteomic studies ,  and characterized  , , .
-

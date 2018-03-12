@@ -1,2 +1,0 @@
-The Pyrotell-T (Cape Cod, MA, USA) LAL-assay was used according to the manufacturer's instructions. Turbidity was measured every 10 min for at least 1.5 h at 37C in a Tecan Infinite 200 Pro microplate reader at 405 nm. The time point with the highest resolution between the endotoxin standard samples was chosen for analysis.
-

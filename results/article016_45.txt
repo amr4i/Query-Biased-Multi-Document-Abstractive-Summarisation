@@ -1,4 +1,0 @@
-In summary, CVU is a powerful free and open source visualization tool for the exploration and analysis of the human connectome that expands upon visualization features available in other software packages. It is able to leverage powerful tools available for neuroscientific analysis in a scientific python environment, to which it also represents an important contribution.
-
-CVU can be downloaded at . Extensive documentation is available at .
-

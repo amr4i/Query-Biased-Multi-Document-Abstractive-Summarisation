@@ -1,2 +1,0 @@
-One statistic of particular interest in visualization is the modular structure of brain networks. In order to calculate modular structure, CVU utilizes an algorithm to automatically identify the optimal modular structure by iteratively maximizing modularity , which is effective even when the optimal number and size of communities is not known. A fine-tuning algorithm to further optimize the modularity is then applied .
-

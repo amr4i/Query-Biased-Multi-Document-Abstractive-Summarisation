@@ -1,2 +1,0 @@
-We wrote the simulation program in the R programming language (v. 3.1.1) and used some functions from the add-on package reshape2 (v. 1.2.4) for data management and functions from the lattice package (v. 0.2029) for graphs . The programme is available for download as supplementary material to this article ().
-

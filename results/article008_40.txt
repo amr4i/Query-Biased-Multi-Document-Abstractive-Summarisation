@@ -1,4 +1,0 @@
-In conclusion: This study shows that the use of the shift and crossings rules on run charts is effective for detection of non-random variation due to shifts and drifts in process mean while keeping the false signal rate at an acceptable level. We recommend that the use of the trend rule should be discontinued.
-
-illustrates the use of this guideline on data from a hospital that reduced the post-operative mortality after implementing the WHO Safe Surgery Checklist.
-

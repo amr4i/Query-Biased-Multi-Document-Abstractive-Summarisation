@@ -1,2 +1,0 @@
-In the 3D Brain view, a transparent cortical surface is displayed along with a node link representation, in which nodes are located in a realistic spatial scale inside the brain. This view is similar to visualizations found in the Connectome Viewer toolbox  and the UCLA Multimodal Connectivity Database , and has novel interactive features including the ability to interactively isolate connections  for instance, left clicking on a node will show only the connections to that node (see ) and the node's label will be displayed.
-

@@ -1,4 +1,0 @@
-Thus, run charts are useful aids for improving health care processes or for detection of process degradation .
-
-Runs analysis have been studied since the 1940s, and several tests have been proposed to detect non-random patterns in a data sequence.
-

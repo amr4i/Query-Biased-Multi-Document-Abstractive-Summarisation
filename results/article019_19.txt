@@ -1,4 +1,0 @@
-Experimental protocols used in this investigation were approved by the Ethical Committee of Rey Juan Carlos University and were conducted in accordance with the guidelines of the International Association for the Study of Pain .
-
-A COX inhibitor screening assay (kit 700100) was used to determine the activity of isolated ovine COX-1 and human recombinant COX-2 as described by the manufacturer (Cayman Chemical Company, USA).
-

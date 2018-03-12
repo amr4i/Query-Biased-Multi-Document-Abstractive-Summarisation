@@ -1,2 +1,0 @@
-This systematic review examined RNA stability over time and temperature, but it did not examine increases in HIV RNA past time and temperature thresholds. Extended storage time may erroneously detect intracellular viral particles after cell lysis, which is of unknown clinical significance . Given this theoretical risk, and the lack of studies particularly for patients with undetectable VLs, we caution generalization of our findings to this population. Further studies are warranted to establish the safety of extended storage conditions when monitoring patients on ART.
-

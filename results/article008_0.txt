@@ -1,2 +1,0 @@
-Plotting data over time is a simple method to learn from trends, patterns, and variation in data over time and to study the effect of improvement efforts.
-

@@ -1,2 +1,0 @@
-Total RNA was isolated from the same F1 and F4 samples used in the proteomic analysis. cDNA was generated using a reverse transcriptase kit (TaKaRa, Tokyo, Japan). Reverse transcription (RT)-PCR reactions were repeated 4 times for each biological replicate. The actin gene (NCBI No. JQ965663) of  was used as an internal control to normalize the template cDNA. The primers used are provided in .
-

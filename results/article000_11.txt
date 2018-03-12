@@ -1,2 +1,0 @@
-In contrast, after membrane filtration of samples, qPCR-based quantification with and without pretreatment of EMA was comparable (>0.05) to microbiological cell enumeration (). Again, high correlation coefficient values of R (0.942, slope 1.001; without EMA, and 0.893, slope 0.954; with EMA) were achieved (). The results showed that the filtration method was more appropriate for the isolation of  from water; therefore, this method was used for subsequent experiments.
-

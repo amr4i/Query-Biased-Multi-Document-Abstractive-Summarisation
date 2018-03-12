@@ -1,2 +1,0 @@
-For parcellations of more than a few nodes, visualization of the entire network with many connections does not produce an easily interpretable result. Furthermore, at very high network resolution visualization can become quite slow, though this depends on the hardware. For these reasons, CVU automatically cuts off all but the strongest 500 connections in order to balance visualization and performance, while still offering control of these parameters to the user so that more connections can be shown if desired.
-

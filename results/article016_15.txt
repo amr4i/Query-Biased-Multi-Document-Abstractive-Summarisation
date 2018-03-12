@@ -1,2 +1,0 @@
-While CVU contains a graphical user interface through which users can interact with and load data, it also contains a scripting window and a scripting mode so that advanced users can leverage the power of python and interact with the underlying data structures and visualizations directly.
-

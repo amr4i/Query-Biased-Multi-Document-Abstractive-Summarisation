@@ -1,2 +1,0 @@
-45 M co-chaperonin was cross-linked with 1 mM disuccinimidyl suberate (DSS - Pierce) at room temperature in 50 mM Na-HEPES pH 7.5, 10 mM MgCl and 100 mM KCl. The cross-linking reaction was stopped by the addition of a one-third volume of sample buffer: 62.5 mM Tris-HCl pH 6.8, 2% SDS, 5% -mercaptoethanol, 20% glycerol, 1 M urea and boiling for 5 min, prior to denaturing electrophoresis in a mini 1019% acrylamide gradient gel.
-

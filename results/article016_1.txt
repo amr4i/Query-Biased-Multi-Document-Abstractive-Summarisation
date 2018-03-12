@@ -1,2 +1,0 @@
-The field of connectomics began with work on the , a roundworm whose neural connectivity was completely characterized, creating a network with 302 neurons . In a seminal discovery about the complex organization of graphs, the nervous system of  as well as other complex networks from numerous domains were shown to exhibit small-world organization . Graph theoretical approaches lending new insight to the dynamics of complex networks began to proliferate, including in the study of social networks, the internet, and food webs .
-

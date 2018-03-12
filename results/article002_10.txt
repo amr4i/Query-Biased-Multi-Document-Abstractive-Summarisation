@@ -1,2 +1,0 @@
-Purified MCPs were broken by heating to 95C in Laemmli buffer and proteins were separated by polyacrylamide gel electrophoresis using 4%20% (wt./vol.) polyacrylamide gels. GFP was detected by western blotting by standard techniques using mouse anti-GFP primary antibody (Clontech 632375) at a 1:2000 dilution and horseradish peroxidase-conjugated goat anti-mouse secondary antibody (Thermo Scientific 32430) at a 1:1000 dilution.
-

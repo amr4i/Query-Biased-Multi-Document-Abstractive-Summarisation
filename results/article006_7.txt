@@ -1,2 +1,0 @@
-The independent predictors, together with the -coefficients of the Cox model, the hazard ratios, and the 95% confidence intervals, are shown in . Average 1-year defect remaining open rate was 0.989 and average 3-year defect remaining open rate was 0.948, which were estimated at the mean value of the variables. To estimate the probability of an individual with PMVSD occurring SC, the following formula was used:
-

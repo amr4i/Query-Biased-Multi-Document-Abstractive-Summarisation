@@ -1,2 +1,0 @@
-Primary human CD1c DCs were isolated via magnetic cell sorting using the Miltenyi CD1c (BCDA-1) + Dendritic Cell Isolation Kit according to the manufacturer's instructions. CD1c DCs were cultivated in DC-medium (RPMI 1640 medium supplemented with 10% i.a. FBS, 100 U/ml penicillin, 100 g/ml streptomycin and 2 mM L-glutamine). The purity of monocytes, moDCs and CD1c DCs was routinely analysed by flow cytometry.
-

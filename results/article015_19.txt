@@ -1,2 +1,0 @@
-With 90% probability the by-catch in Estonia was more than 780 but less than 930, and in Finland more than 130 but less than 270. In Sweden, the posterior distribution of the by-catch was highly right skewed and there the by-catch was with 90% probability over 210 and under 1790. However, the 80% quantile of the posterior of the by-catch in Sweden was 1060.
-

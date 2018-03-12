@@ -1,2 +1,0 @@
-However, having no control limits, run charts are not capable of determining if any single data point deviates significantly from the rest. Thus run charts will not detect large and transient shifts and may be slower than control charts to detect large (>2 SD) permanent shifts in process mean. Also, run charts are unable to determine if the process is statistically stable . But even if stability may be the end goal of all improvement work, induced instability as a result of ongoing improvement is the short term goal.
-

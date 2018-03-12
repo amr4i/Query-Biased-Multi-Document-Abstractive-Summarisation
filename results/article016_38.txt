@@ -1,4 +1,0 @@
-Matrix creation from white matter reconstruction typically employs a fiber counting strategy, where connectivity values consist of counts of tracts between finely parcellated regions of interest, normalized for differences in ROI size and distance . Another technique is to estimate connectivity as the average or integral of a metric over the course of white matter tracts  for instance, the average magnetization transfer values over the streamline tracts connecting ROIs .
-
-There are numerous open source software packages available for the processing and construction of diffusion data and the construction of diffusion brain networks using fiber counting algorithms, including Camino , the Connectome Mapper , DSI Studio () and the dipy project .
-

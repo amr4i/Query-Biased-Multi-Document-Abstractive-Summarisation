@@ -1,2 +1,0 @@
-Graph theory has led to insights on clinical populations. In epilepsy, small world organization is reduced during ictal activity compared to interictal activity , and also reduced at rest compared to healthy controls , The default mode network in epilepsy patients also shows altered structural connectivity compared to healthy controls , . Whole brain networks have also demonstrated applications to schizophrenia , , Alzheimer's disease , attention-deficit/hyperactive disorder , and personality traits .
-

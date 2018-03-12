@@ -1,2 +1,0 @@
-For fluorescence assays, cells expressing TRP channels (TRPV1-SH-SY5Y, TRPM8-HEK and TRPA1-IMR90) were seeded in 96-well plates (Corning Incorporated, Corning, NY) at a cell density of 40,000 cells 2 days before treatment. The day of treatment the medium was replaced with 100 L of the dye loading solution Fluo-4 NW supplemented with probenecid 2.5 mM. Then the compounds dissolved in DMSO were added at the desired concentrations and the plate(s) were incubated at 37C in a humidified atmosphere of 5% CO for 60 minutes.
-

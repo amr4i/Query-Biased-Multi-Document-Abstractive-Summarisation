@@ -1,2 +1,0 @@
-To calculate network measures, CVU uses bctpy, the Brain Connectivity Toolbox for python. Bctpy is our group's translation of the Brain Connectivity Toolbox , a rich open-source library written in MATLAB for the analysis of brain networks. In contrast to the Brain Connectivity Toolbox, bctpy is written in pure python, alleviating the need for a nonfree MATLAB license and allowing the easy integration of network analysis into a python workflow without introducing additional dependencies.
-

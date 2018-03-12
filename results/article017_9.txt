@@ -1,2 +1,0 @@
-Adenoviral vectors containing cDNA of green fluorescent protein (Ad-GFP) and constitutively active FOXO1 (T24A/S256D/S319A) (Ad-FOXO1-CA) were provided by Dr. Domenico Accili . LT2 cells were seeded at 210 cells/well on 6-well plates. The next morning, cells were transduced with a multiplicity of infection of 200 of Ad-GFP or Ad-FOXO1-CA for 6 hours, then switched to serum-free media. 24 hours after adenoviral infection, cells were treated with vehicle (0.1% BSA), 10 ng/mL activin, 10 nM GnRH (Sigma-Aldrich), or both hormones for 6 hours.
-

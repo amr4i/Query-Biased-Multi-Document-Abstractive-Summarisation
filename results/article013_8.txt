@@ -1,2 +1,0 @@
-We examined the effects of gentiolactone on the NF-B signaling pathway activated by LPS stimulation. LPS stimulation leads to the degradation of the IB proteins that regulat nuclear NF-B. The p65:p50 dimer is a member of the NF-B family and is considered to be part of the canonical pathway. This classic NF-B dimer is activated by IB degradation and then translocates to the nucleus and binds to DNA. Gentiolactone did not inhibit IB protein degradation (), nuclear translocation of p65/NF-B protein (), or binding of NF-B protein to DNA ().
-

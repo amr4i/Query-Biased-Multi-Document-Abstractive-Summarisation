@@ -1,2 +1,0 @@
-The posterior of the total number of seals that survived other mortality sources, , is concentrated on smaller values than its prior. The posterior distributions of population sizes in sub-areas followed closely their prior everywhere else except in S1 (). In S1, the population size has decreased, compared to the prior.
-

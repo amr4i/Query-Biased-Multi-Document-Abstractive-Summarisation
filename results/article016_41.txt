@@ -1,2 +1,0 @@
-CVU has been tested with networks generated with all of the software packages described above. By separating the process of network construction from the visualization, we ensure that CVU is able to work with networks constructed from any modality of data, generated from any software package, and using any algorithm.
-

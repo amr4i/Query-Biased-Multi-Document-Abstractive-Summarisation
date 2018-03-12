@@ -1,2 +1,0 @@
-Other parcellation schemes are also possible. Some alternatives to anatomical parcellation include the clustering of functional activations  and clustering of white-matter bundles from diffusion tractography , . While these schemes may overcome the ad hoc nature of anatomically parcellating functional data, the limitations of the choice of parcellation are not fully known , .
-

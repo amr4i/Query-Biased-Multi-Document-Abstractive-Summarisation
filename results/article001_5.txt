@@ -1,2 +1,0 @@
-Using a pre-defined protocol, five databases (Pubmed, EMBASE, Ovid, LILACS, and Web of Science) were searched according to pre-specified search terms (). No restrictions on language, publication status, or year of publication were used. Titles were accessed from database inception to August 13, 2013 or October 28, 2013, depending on database.
-
