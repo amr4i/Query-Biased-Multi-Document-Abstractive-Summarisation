@@ -89,19 +89,22 @@ class IndexFiles(object):
                 except Exception, e:
                     print "Failed in indexDocs:", e
 
-if __name__ == '__main__':
-    if len(sys.argv) < 2:
-        print IndexFiles.__doc__
-        sys.exit(1)
+def indexing(directory):
     lucene.initVM(vmargs=['-Djava.awt.headless=true'])
     print 'lucene', lucene.VERSION
     start = datetime.now()
     try:
         base_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
-        IndexFiles(sys.argv[1], os.path.join(base_dir, INDEX_DIR),
+        IndexFiles(directory, os.path.join(base_dir, INDEX_DIR),
                    StandardAnalyzer())
         end = datetime.now()
         print end - start
     except Exception, e:
         print "Failed: ", e
         raise e
+
+if __name__ == '__main__':
+    if len(sys.argv) < 2:
+        print IndexFiles.__doc__
+        sys.exit(1)
+    indexing(sys.argv[1])

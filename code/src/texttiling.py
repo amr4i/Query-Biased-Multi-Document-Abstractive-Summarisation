@@ -22,6 +22,12 @@
 #
 # *****************************************************************************
 
+
+'''
+puts extracted paragraphs in different files in ./results/ 
+sub-directory.
+'''
+
 from __future__ import division
 import re
 import sys
@@ -330,11 +336,10 @@ def writeTextTiles(boundaries, pLocs, inputText, filename):
     
 
     for i, textTile in enumerate(textTiles):
-        outfile = "results/"+filename.split("/")[1].split(".tx")[0] + "_" + str(i) + ".txt"
-        f = open(outfile, 'w')
-        for paragraph in textTile:
-            f.write(paragraph + '\n\n')
-        f.close()
+        outfile = "results/"+filename.split("/")[-1].split(".tx")[0] + "_" + str(i) + ".txt"
+        with open(outfile, 'w') as f:
+            for paragraph in textTile:
+                f.write(paragraph + '\n\n')
       
     return splitIndices
 
@@ -418,7 +423,7 @@ def write_results(out, orig_breaks, pred_breaks, num_pgraphs, k):
     #out.write(str(precision) + "," + str(recall) + "," + str(wdiff) + ",\n")
     return (precision, recall, wdiff)
 
-def run_tests(w, k):
+def run_tests(w, k, directory, name_list):
     """
     Helper function that runs the TextTiling on the entire corpus
     for a given set of parameters w and k, and writes the average 
@@ -434,13 +439,12 @@ def run_tests(w, k):
     Raises:
         None.
     """
-    input_files = glob.glob("articles/*.txt")
-    # out = open(outfile, 'a')
-    # out.write("w = " + str(w) + ", k = " + str(k) + "\n")
-    precision1 = precision2 = precision3 = precision4 = 0
-    recall1 = recall2 = recall3 = recall4 = 0
-    wdiff1 = wdiff2 = wdiff3 = wdiff4 = 0
-
+    input_files = []
+    for name in name_list:
+        name = name.split('/')[-1]
+        input_files.append(os.path.join(directory, name.strip()))
+    
+    print input_files
     counter = 0
     for file in input_files:
         print "processing input " + str(counter) +":"+file+ "..."
@@ -471,86 +475,32 @@ def run_tests(w, k):
                 paragraph_count += tile.count("\n\n") + 1
                 pred_breaks3.append(paragraph_count)  
           
-            # # 4) do random textTiling
-            # prob = float(len(original_section_breaks))/float(len(paragraph_breaks))
-            # num_pgraphs = len(paragraph_breaks)
-            # pred_breaks4 = random_breaks(prob, num_pgraphs)
+            # print pred_breaks3
 
-            # print pred breaks
-            print pred_breaks3
-
-
-            # get metrics
-            # wk = int((num_pgraphs + 1)/(2 * (len(original_section_breaks) + 1)))
-            # (p,r,wd) = write_results(out, original_section_breaks, pred_breaks1, num_pgraphs, wk)
-            # precision1 += p
-            # recall1 += r
-            # wdiff1 += wd
-            # (p,r,wd) = write_results(out, original_section_breaks, pred_breaks2, num_pgraphs, wk)
-            # precision2 += p
-            # recall2 += r
-            # wdiff2 += wd
-            # (p,r,wd) = write_results(out, original_section_breaks, pred_breaks3, num_pgraphs, wk)
-            # precision3 += p
-            # recall3 += r
-            # wdiff3 += wd
-            # (p,r,wd) = write_results(out, original_section_breaks, pred_breaks4, num_pgraphs, wk)
-            # precision4 += p
-            # recall4 += r
-            # wdiff4 += wd
-            #out.write("\n")
-
-    # write out the average statistics
     n = len(input_files)
-    # out.write("block     : " + str(precision1 / n) + ", " + 
-    #           str(recall1 / n) + ", " + str(wdiff1 / n) + ",\n")
-    # out.write("vocab     : " + str(precision2 / n) + ", " + 
-    #           str(recall2 / n) + ", " + str(wdiff2 / n) + ",\n")
-    # out.write("nltk-block: " + str(precision3 / n) + ", " + 
-    #           str(recall3 / n) + ", " + str(wdiff3 / n) + ",\n")
-    # out.write("random    : " + str(precision4 / n) + ", " + 
-    #           str(recall4 / n) + ", " + str(wdiff4 / n) + ",\n")
     
-def main(argv):
-    '''
-    Tokenize a file and compute gap scores using the algorithm described
-    in Hearst's TextTiling paper. Options to vary w and k.
-
-    Args :
-        argv[1] : The name of the file where output should be written
-    Returns:
-        None
-    Raises :
-        None
-    '''
-    if (len(argv) != 1):
-        print("\nUsage: python texttiling.py \n")
-        sys.exit(0)
+def textTiling(directory, name_list):
     
-    # constants for pseudo-sentence size and block size, respectively.
-    
-
-    # empty the file
-    # with open(argv[1], "w"):
-    #     pass 
-
-    # run texttiling for different values of w and k.
-    # w_start = 20
-    # w_end = 20
-    # k_start = 10
-    # k_end = 10
-    # increment = 2
-    # for w in xrange(w_start, w_end+1, increment):
-    #     for k in xrange(k_start, k_end+1, increment):  
-    #         print "w = " + str(w) + ", k = " + str(k)
-    #         run_tests(w, k)
-
     # run texttiling for single values of w and k.
     w = 20
     k = 10
     print "w = " + str(w) + ", k = " + str(k)
-    run_tests(w, k)
+    run_tests(w, k, directory, name_list)
+
 
 if __name__ == "__main__":
-  main(sys.argv)
+    if len(argv) != 2 and len(argv) != 3:
+        print("\nUsage: python texttiling.py <data_directory> [<names_file>]\n")
+        sys.exit(0)
+    name_list=[]
+    if(len(argv) == 2):
+        for name in os.listdir(sys.argv[1]):
+            name_list.append(name)
+    else:
+        with open(sys.argv[2], 'r') as f:
+            names=f.readlines()
+            names = [w.strip() for w in names]
+            for name in names:
+                name_list.append(name)
+    textTiling(sys.argv[1], name_list)
 

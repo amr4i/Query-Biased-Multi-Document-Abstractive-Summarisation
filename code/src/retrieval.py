@@ -2,7 +2,7 @@
 
 INDEX_DIR = "IndexFiles.index"
 
-import sys, os, lucene
+import sys, os, lucene, re
 
 from java.nio.file import Paths
 from org.apache.lucene.analysis.standard import StandardAnalyzer
@@ -20,6 +20,37 @@ search query entered against the 'contents' field.  It will then display the
 search.close() is currently commented out because it causes a stack overflow in
 some cases.
 """
+
+def retrieve(command):
+    try:
+        lucene.initVM(vmargs=['-Djava.awt.headless=true'])
+    except ValueError:
+        print "JVM running."
+
+    print 'lucene', lucene.VERSION
+    base_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
+    directory = SimpleFSDirectory(Paths.get(os.path.join(base_dir, INDEX_DIR)))
+    searcher = IndexSearcher(DirectoryReader.open(directory))
+    analyzer = StandardAnalyzer()
+    
+    # to convert to AND query
+    command = re.sub(r' ', r' +', command) 
+    command = "+"+command
+
+    print "Searching for:", command
+    query = QueryParser("contents", analyzer).parse(command)
+    print query
+    scoreDocs = searcher.search(query, 500).scoreDocs
+    print "%s total matching documents." % len(scoreDocs)
+
+    retrieved_docs = []
+    for scoreDoc in scoreDocs:
+        doc = searcher.doc(scoreDoc.doc)
+        retrieved_docs.append(os.path.join(doc.get("path"), doc.get("name")))
+
+    del searcher
+    return retrieved_docs
+
 def run(searcher, analyzer):
     while True:
         print
@@ -29,9 +60,15 @@ def run(searcher, analyzer):
             return
 
         print
+
+        # to convert to AND query
+        command = re.sub(r' ', r' +', command) 
+        command = "+"+command
+
         print "Searching for:", command
         query = QueryParser("contents", analyzer).parse(command)
-        scoreDocs = searcher.search(query, 50).scoreDocs
+        print query
+        scoreDocs = searcher.search(query, 500).scoreDocs
         print "%s total matching documents." % len(scoreDocs)
 
         for scoreDoc in scoreDocs:

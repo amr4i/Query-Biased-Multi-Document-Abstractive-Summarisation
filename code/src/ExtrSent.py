@@ -392,7 +392,7 @@ def QueryBiasedLSA(clean_sentences,word_idf,clean_query,sentences):
 
 
 
-f= open('3topic.txt',"r+")
+f= open('./articles/article000.txt',"r+")
 ExtrSen(f.read(),"What are animals")
 #print(Vocab)
 
