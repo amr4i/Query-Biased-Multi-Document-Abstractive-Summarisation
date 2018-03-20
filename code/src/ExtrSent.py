@@ -4,6 +4,7 @@ import numpy as np
 #nltk.download('punkt')
 from numpy import linalg as LA
 import os
+import string
 from nltk import sent_tokenize
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
@@ -30,8 +31,8 @@ def clean_review(text):
 # convert to lower case
 	tokens = [w.lower() for w in tokens]
 # remove punctuation from each word
-	table = str.maketrans('', '', string.punctuation)
-	stripped = [w.translate(table) for w in tokens]
+	# table = string.maketrans('', string.punctuation)
+	stripped = [w.translate(None, string.punctuation) for w in tokens]
 # remove remaining tokens that are not alphabetic
 	words = [word for word in stripped if word.isalpha()]
 # filter out stop words
@@ -393,6 +394,6 @@ def QueryBiasedLSA(clean_sentences,word_idf,clean_query,sentences):
 
 
 f= open('./articles/article000.txt',"r+")
-ExtrSen(f.read(),"What are animals")
+ExtrSen(f.read(),"study factor")
 #print(Vocab)
 
