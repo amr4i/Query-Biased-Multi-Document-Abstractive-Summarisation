@@ -19,7 +19,7 @@ from math import sqrt
 Vocab = {} #{term:idf}
 threshold = 0.2  # for CosSim
 window = 3      #window for para creation
-Cutoff = 15     # Top Cutoff sentences to be picked
+Cutoff = 3    # Top Cutoff sentences to be picked
 max_gap_size = 4 #Luhn significance window
 REL = 2 #How imp is relevance as cmp to fidelity in Luhn
 # 100:1
@@ -49,6 +49,9 @@ def CreateWindows(indices,sentences):
 	for i in indices:
 		temp=""
 		for x in range(max(0,i-window),min((i+window+1),len(sentences))):
+			if("\n\n" in sentences[x] and x!=max(0,i-window)):
+				print("Ola")
+				break
 			temp += sentences[x]
 			temp += "\n"
 		GoodParas.append(temp)
@@ -137,9 +140,10 @@ def ExtrSen(doc,query):
 		clean_sentences.append(clean_sent)
 
 	clean_query = clean_review(query)
-	# VSmethod(clean_sentences,clean_query,word_idf,sentences)
-	# Tfidfmethod(clean_sentences,clean_query,word_idf,sentences)
-	# LuhnClusters(sentences,word_cf,clean_query)
+	print(sentences)
+	VSmethod(clean_sentences,clean_query,word_idf,sentences)
+	Tfidfmethod(clean_sentences,clean_query,word_idf,sentences)
+	LuhnClusters(sentences,word_cf,clean_query)
 	QueryBiasedLSA(clean_sentences,word_idf,clean_query,sentences)
 
 
@@ -385,6 +389,12 @@ def QueryBiasedLSA(clean_sentences,word_idf,clean_query,sentences):
 	for i in GoodSent:
 		print(sentences[i])
 		print("\n")
+	f = open("LSAparas.txt","w")
+	for i in GoodParas:
+		f.write(i)
+		f.write("\n")
+	f.close()
+
 
 	
 
