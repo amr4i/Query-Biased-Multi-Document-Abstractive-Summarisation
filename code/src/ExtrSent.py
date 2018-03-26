@@ -1,3 +1,4 @@
+import sys
 import nltk
 import glob
 import numpy as np
@@ -51,7 +52,6 @@ def CreateWindows(indices,sentences):
 		temp=""
 		for x in range(max(0,i-window),min((i+window+1),len(sentences))):
 			if("\n\n" in sentences[x] and x!=max(0,i-window)):
-				print("Ola")
 				break
 			temp += sentences[x]
 			temp += "\n"
@@ -69,9 +69,6 @@ def CosSim(sen,query,vocab):
 	for token in query:
 		if token in sen:
 			cnt+=1
-			#print(token)
-			#print(vocab[token])
-			#print(sentf[token])
 			score += vocab[token]*sentf[token]*querytf[token]*vocab[token] #tfidf of doc and tfidf of query
 		norm2 += (querytf[token]*vocab[token])**2
 	for token in sen:
@@ -83,10 +80,6 @@ def CosSim(sen,query,vocab):
 	if score == 0:
 		return 0
 	score = 1.0*score/(1.0*norm1*norm2)
-	# print(sen)
-	# print(query)
-	# print(str(score) + "   " + str(cnt))
-	# print("\n")
 	return score
 
 def Tfidf(sen,query,vocab):
@@ -99,9 +92,6 @@ def Tfidf(sen,query,vocab):
 	for token in query:
 		if token in sen:
 			cnt+=1
-			#print(token)
-			#print(vocab[token])
-			#print(sentf[token])
 			score += vocab[token]*sentf[token] #tfidf of doc and tfidf of query
 		norm2 += (querytf[token]*vocab[token])**2
 	for token in sen:
@@ -113,67 +103,48 @@ def Tfidf(sen,query,vocab):
 	if score == 0:
 		return 0
 	#score = 1.0*score/(1.0*norm1*norm2)
-	# print(sen)
-	# print(query)
-	# print(str(score) + "   " + str(cnt))
-	# print("\n")
 	return score
 
 
-def ExtrSen(doc,query):
+def ExtrSen(doc,query,method):
 	'''Assumes doc and query are strings'''
 	clean_sentences = [] # list of list of strings
 	sentences = sent_tokenize(doc) # list of strings
-	#print(sentences)
 	word_idf = defaultdict(lambda: 0)
 	word_cf = defaultdict(lambda: 0) #collection frequency
 	NumDocs = len(sentences)
 	for sen in sentences:
-		#print(type(sen))
 		clean_sent = clean_review(sen)
 		words = set(clean_sent)
 		for word in words:
 			word_idf[word] += 1
 			word_idf[word] = np.log(NumDocs*1.0 / 1.0*(1.0 + word_idf[word]))
-		#print(clean_sent)
 		for word in clean_sent:
 			word_cf[word] +=1
 		clean_sentences.append(clean_sent)
 
 	clean_query = clean_review(query)
-	print(sentences)
-	VSmethod(clean_sentences,clean_query,word_idf,sentences)
-	Tfidfmethod(clean_sentences,clean_query,word_idf,sentences)
-	LuhnClusters(sentences,word_cf,clean_query)
-	QueryBiasedLSA(clean_sentences,word_idf,clean_query,sentences)
+	if method == 2:
+		GoodParas = VSmethod(clean_sentences,clean_query,word_idf,sentences)
+	elif method == 3:
+		GoodParas = Tfidfmethod(clean_sentences,clean_query,word_idf,sentences)
+	elif method == 4:
+		GoodParas = LuhnClusters(sentences,word_cf,clean_query)
+	else:
+		GoodParas = QueryBiasedLSA(clean_sentences,word_idf,clean_query,sentences)
 
+	return GoodParas
 
 def VSmethod(clean_sentences,clean_query,word_idf,sentences):
-	print("VECTOR SPACE METHOD : \n\n")
 	GoodSent = []
 	for i,sen in enumerate(clean_sentences):
 		score = CosSim(sen,clean_query,word_idf) #both query and sen are lists of tokens
-		#print(score)
 		if score >= threshold:
 			GoodSent.append(i)
-	#print(GoodSent)
 	GoodParas = CreateWindows(GoodSent,sentences)
-	for i in GoodSent:
-		print(sentences[i])
-		print("\n")
-
-	#print("\n\n\n Good Paras : \n")
-	# for i in GoodParas:
-	# 	print(i)
-	# 	print("\n")
-	f = open("VectorSpaceParas.txt","w")
-	for i in GoodParas:
-		f.write(i)
-		f.write("\n")
-	f.close()
+	return GoodParas
 
 def Tfidfmethod(clean_sentences,clean_query,word_idf,sentences):
-	print("TF IDF METHOD : \n\n")
 	GoodSent = [] # will hold indices of the good sentences
 	Scores =[]
 	for i,sen in enumerate(clean_sentences):
@@ -182,26 +153,12 @@ def Tfidfmethod(clean_sentences,clean_query,word_idf,sentences):
 	#To sort in descending order
 	ind = np.argsort(-np.array(Scores))
 	for i in ind[:Cutoff]:
-		#print(Scores[i])
 		GoodSent.append(i)
 	GoodParas = CreateWindows(GoodSent,sentences)
-	for i in GoodSent:
-		print(sentences[i])
-		print("\n")
-
-	#print("\n\n\n Good Paras : \n")
-	# for i in GoodParas:
-	# 	print(i)
-	# 	print("\n")
-	f = open("TfidfParas.txt","w")
-	for i in GoodParas:
-		f.write(i)
-		f.write("\n")
-	f.close()
+	return GoodParas
 
 		
 def LuhnClusters(sentences,word_cf,clean_query):
-	print("LUHN METHOD : \n\n")
 	GoodSent = [] # will hold indices of the good sentences
 	#Setting threshold
 	n = len(sentences)
@@ -239,7 +196,6 @@ def LuhnClusters(sentences,word_cf,clean_query):
 		for order, word in enumerate(sentence):
 			porter = PorterStemmer()
 			stem = porter.stem(word)
-	            #print(stem+ "   " + word)
 	            # new chunk
 			if stem in sig_stems and not in_chunk:
 				in_chunk = True
@@ -252,9 +208,6 @@ def LuhnClusters(sentences,word_cf,clean_query):
 	            # end of chunk
 			if chunks and chunks[-1][-max_gap_size:] == NONSIGNIFICANT_CHUNK:
 				in_chunk = False
-		# print(chunks)
-		# print(sentence_)
-		# print("\n")
 		ratings =[]
 		for chunk in chunks:
 			words_count = len(chunk)
@@ -278,25 +231,12 @@ def LuhnClusters(sentences,word_cf,clean_query):
 	OverallScores = np.array(LuhnScores) + np.array(RelScores)
 	ind = np.argsort(-OverallScores)
 	for i in ind[:Cutoff]:
-		#print(OverallScores[i])
 		GoodSent.append(i)
 	GoodParas = CreateWindows(GoodSent,sentences)
-	for i in GoodSent:
-		print(sentences[i])
-		print("\n")
+	return GoodParas
 
-	#print("\n\n\n Good Paras : \n")
-	# for i in GoodParas:
-	# 	print(i)
-	# 	print("\n")
-	f = open("LuhnParas.txt","w")
-	for i in GoodParas:
-		f.write(i)
-		f.write("\n")
-	f.close()
 
 def QueryBiasedLSA(clean_sentences,word_idf,clean_query,sentences):
-	print("LSA method\n")
 	GoodSent = []
 	#CreateVocab
 	i=0
@@ -318,7 +258,6 @@ def QueryBiasedLSA(clean_sentences,word_idf,clean_query,sentences):
 	#Sen_term_matrix is a numy nd array now
 	Term_Sen_matrix =Sen_Term_matrix.T
 	u, s, vT = np.linalg.svd(Term_Sen_matrix, full_matrices=True)
-	print(u.shape, s.shape, vT.shape)
 	#Deciding KK
 	#KK will be such that the singular values do not fall below half the value of the highest singular value
 	KK=1
@@ -326,18 +265,12 @@ def QueryBiasedLSA(clean_sentences,word_idf,clean_query,sentences):
 	for i in range(s.shape[0]):
 		if s[i] >= Cmp:
 			KK+=1
-	print(KK)
 	#KK=3
-	print(s[0],s[1],s[2],s[3],s[4])
 	Uk = u[:,:KK]
 	Sk = np.diag(s[:KK])
-	#print(Sk.shape)
 	Vtk = vT[:KK,:]  
 	Tp = np.matmul(Sk,Vtk)
-	#print(len(clean_sentences))
-	#print(Tp.shape[1])
 	assert Tp.shape[1] == len(clean_sentences)
-	#print(Tp[:,1])
 
 	#Scoring will be in two parts
 
@@ -351,8 +284,6 @@ def QueryBiasedLSA(clean_sentences,word_idf,clean_query,sentences):
 	Sk_ = LA.inv(Sk)
 	Query_in_KK = np.matmul(np.matmul(Sk_,Uk.T),Query_Term_Vec) # KK x 1
 	Query_in_KK = Query_in_KK.flatten()
-	print(Query_in_KK)
-	print(np.argmax(Query_in_KK))
 	
 	# #A new lead:
 	# ind_ = np.argsort(-Query_in_KK)
@@ -367,7 +298,6 @@ def QueryBiasedLSA(clean_sentences,word_idf,clean_query,sentences):
 
 	for i in range(Tp.shape[1]):
 		LSAScores[i] = (LA.norm(Query_in_KK*Tp[:,i]))
-	#print(Query_Term_Vec.shape)
 	#Project query vector to LSA concept space
 
 
@@ -376,34 +306,49 @@ def QueryBiasedLSA(clean_sentences,word_idf,clean_query,sentences):
 		# # #Cvt to 2D array because CS demands so
 		# # Q1 = Query_in_KK.reshape(-1,1)
 		# # S1 = Tp[:,i].reshape(-1,1)
-		# # print(Q1.shape, S1.shape)
-		# print((CS(Q1,S1)))
 		RelScores[i] = np.dot(Query_in_KK,Tp[:,i])
 		RelScores[i] = 1.0*RelScores[i]/1.0*(LA.norm(Query_in_KK)*LA.norm(Tp[:,i]))
-		#print(RelScores[i],LSAScores[i])
 	OverallScores = LSAweight*RelScores + (1-LSAweight)*LSAScores
 	ind = np.argsort(-OverallScores)
 	for i in ind[:Cutoff]:
-		print(OverallScores[i])
+		# prin`t(OverallScores[i])
 		GoodSent.append(i)
 	GoodParas = CreateWindows(GoodSent,sentences)
-	for i in GoodSent:
-		print(sentences[i])
-		print("\n")
-	f = open("LSAparas.txt","w")
-	for i in GoodParas:
-		f.write(i)
-		f.write("\n")
-	f.close()
+	return GoodParas
 
 
 	
+def extractSent(directory, name_list, query, method):
+	input_files = []
+	for name in name_list:
+		name = name.split('/')[-1]
+		input_files.append(os.path.join(directory, name.strip()))
+
+	counter = 0
+
+	if method == 2:
+		print("VECTOR SPACE METHOD : ")
+	elif method == 3:
+		print("TFIDF METHOD : ")
+	elif method == 4:
+		print("LUHN METHOD : ")
+	else:
+		print("LSA METHOD : ")
+
+	imp_para_files = []
+	for filename in input_files:
+		counter+=1
+		print "processing input "+str(counter) +": "+filename+"..."
+		with open(filename, 'r') as f:
+			GoodParas = ExtrSen(f.read(), query, method)
+		for i, para in enumerate(GoodParas):
+			outfile = "results/"+filename.split("/")[-1].split(".tx")[0] + "_" + str(i) + ".txt"
+			imp_para_files.append(outfile)
+			with open(outfile, 'w') as f:
+				f.write(para)
+
+	return imp_para_files
 
 
-
-
-
-f= open('./articles/article000.txt',"r+")
-ExtrSen(f.read(),"study factor")
-#print(Vocab)
-
+if __name__ == '__main__':
+	extractSent(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])

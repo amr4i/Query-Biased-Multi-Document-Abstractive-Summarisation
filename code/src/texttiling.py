@@ -444,7 +444,7 @@ def run_tests(w, k, directory, name_list):
         name = name.split('/')[-1]
         input_files.append(os.path.join(directory, name.strip()))
     
-    print input_files
+    # print input_files
     counter = 0
     for file in input_files:
         print "processing input " + str(counter) +":"+file+ "..."
@@ -458,24 +458,22 @@ def run_tests(w, k, directory, name_list):
 
             # 1) do our block comparison and 2) vocabulary introduction
             token_sequences, unique_tokens, paragraph_breaks = tokenize_string(text, w)
-            scores1 = block_score(k, token_sequences, unique_tokens)
+            # scores1 = block_score(k, token_sequences, unique_tokens)
             scores2 = vocabulary_introduction(token_sequences, w)
-            boundaries1 = getBoundaries(scores1, paragraph_breaks, w)
+            # boundaries1 = getBoundaries(scores1, paragraph_breaks, w)
             boundaries2 = getBoundaries(scores2, paragraph_breaks, w)
-            pred_breaks1 = writeTextTiles(boundaries1, paragraph_breaks, text, file)
+            # pred_breaks1 = writeTextTiles(boundaries1, paragraph_breaks, text, file)
             pred_breaks2 = writeTextTiles(boundaries2, paragraph_breaks, text, file)
             
             # 3) do nltk's textTiling
-            ttt = TextTilingTokenizer()
-            tiles = ttt.tokenize(text)
-            pred_breaks3 = []
-            paragraph_count = 0
-            for tile in tiles:
-                tile = tile.strip()           
-                paragraph_count += tile.count("\n\n") + 1
-                pred_breaks3.append(paragraph_count)  
-          
-            # print pred_breaks3
+            # ttt = TextTilingTokenizer()
+            # tiles = ttt.tokenize(text)
+            # pred_breaks3 = []
+            # paragraph_count = 0
+            # for tile in tiles:
+            #     tile = tile.strip()           
+            #     paragraph_count += tile.count("\n\n") + 1
+            #     pred_breaks3.append(paragraph_count)  
 
     n = len(input_files)
     
