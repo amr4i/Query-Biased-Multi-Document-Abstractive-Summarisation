@@ -51,6 +51,8 @@ def CreateWindows(indices,sentences):
 	for i in indices:
 		temp=""
 		for x in range(max(0,i-window),min((i+window+1),len(sentences))):
+			if("\n" in sentences[x] and x!=max(0,i-window)):
+				break
 			if("\n\n" in sentences[x] and x!=max(0,i-window)):
 				break
 			temp += sentences[x]
@@ -155,7 +157,11 @@ def Tfidfmethod(clean_sentences,clean_query,word_idf,sentences):
 	for i in ind[:Cutoff]:
 		GoodSent.append(i)
 	GoodParas = CreateWindows(GoodSent,sentences)
+	# print Scores
+	# for sent in GoodSent:
+	# 	print sentences[sent]
 	return GoodParas
+
 
 		
 def LuhnClusters(sentences,word_cf,clean_query):
@@ -230,6 +236,8 @@ def LuhnClusters(sentences,word_cf,clean_query):
 	#Calculating Relevence + Fidelity
 	OverallScores = np.array(LuhnScores) + np.array(RelScores)
 	ind = np.argsort(-OverallScores)
+	# print OverallScores
+	# print ind
 	for i in ind[:Cutoff]:
 		GoodSent.append(i)
 	GoodParas = CreateWindows(GoodSent,sentences)
@@ -351,4 +359,6 @@ def extractSent(directory, name_list, query, method):
 
 
 if __name__ == '__main__':
-	extractSent(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
+	# extractSent(sys.argv[1], sys.argv[2], sys.argv[3])
+	f = open("../../articles/article020.txt", 'r')
+	ExtrSen(f.read(), "", 4)

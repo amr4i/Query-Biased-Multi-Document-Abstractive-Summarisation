@@ -29,6 +29,7 @@ else:
 
 tempDoc, tempDocVecs = getTempDoc("./results", imp_paras)
 
+print len(tempDoc)
 with open("RelevantDoc.txt", 'w') as f:
 	for line in tempDoc:
 		f.write(line)
