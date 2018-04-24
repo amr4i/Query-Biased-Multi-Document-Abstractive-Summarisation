@@ -8,7 +8,7 @@ Authors: Amrit Singhal and Akshat Jindal
 
 ####################################################################
 
-This is the implementation of all parts of the pipeline that we have proposed in our report for the project, which can be found [here](http://home.iitk.ac.in/~amrits/InfoRet_Report.pdf).
+This is the implementation of all parts of the pipeline that we have proposed in our report for the project, which can be found in the repo.
 
 ## Pre-requisites
 
