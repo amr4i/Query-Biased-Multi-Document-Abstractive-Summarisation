@@ -1,5 +1,4 @@
 all:
 
 clean:
-	rm *.txt
-	rm -rf code/IndexFiles*
+	rm -rf code/src/*.pyc *.txt code/IndexFiles*

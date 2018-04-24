@@ -1,1 +1,1 @@
-python ./code/primaryIndexing.py ./articles
+python ./code/primaryIndexing.py $1
