@@ -3,6 +3,7 @@
 ####################################################################
 
 Topic: Query-biased Multi-Document Abstractive Summarisation
+
 Authors: Amrit Singhal and Akshat Jindal
 
 ####################################################################
