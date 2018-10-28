@@ -11,11 +11,12 @@ from util import read_corpus
 class VocabEntry(object):
     def __init__(self):
         self.word2id = dict()
-        self.unk_id = 3
+        self.unk_id = 4
         self.word2id['<pad>'] = 0
         self.word2id['<s>'] = 1
         self.word2id['</s>'] = 2
-        self.word2id['<unk>'] = 3
+        self.word2id['<delim>'] = 3
+        self.word2id['<unk>'] = 4
 
         self.id2word = {v: k for k, v in self.word2id.iteritems()}
 
