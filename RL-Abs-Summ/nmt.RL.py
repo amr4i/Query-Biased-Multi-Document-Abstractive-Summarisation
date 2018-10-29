@@ -454,6 +454,132 @@ class NMT(nn.Module):
 
         return [hyp for hyp, score in ranked_hypotheses]
 
+    def translate_rel(self, src_sents, rel_scores, beam_size=None, to_word=True):
+        """
+        perform beam search
+        TODO: batched beam search
+
+        param src_sents = (batch, src_sent_len)
+        param rel_scores = (batch, src_sent_len)
+        """
+        if not type(src_sents[0]) == list:
+            src_sents = [src_sents]
+        if not beam_size:
+            beam_size = args.beam_size
+
+        src_sents_var = to_input_variable(src_sents, self.vocab.src, cuda=args.cuda, is_test=True)
+
+        src_encoding, dec_init_vec = self.encode(src_sents_var, [len(src_sents[0])])
+        src_encoding_att_linear = tensor_transform(self.att_src_linear, src_encoding)
+
+        init_state = dec_init_vec[0]
+        init_cell = dec_init_vec[1]
+        hidden = (init_state, init_cell)
+
+        att_tm1 = Variable(torch.zeros(1, self.args.hidden_size), volatile=True)
+        hyp_scores = Variable(torch.zeros(1), volatile=True)
+        if args.cuda:
+            att_tm1 = att_tm1.cuda()
+            hyp_scores = hyp_scores.cuda()
+
+        eos_id = self.vocab.tgt['</s>']
+        bos_id = self.vocab.tgt['<s>']
+        tgt_vocab_size = len(self.vocab.tgt)
+
+        hypotheses = [[bos_id]]
+        completed_hypotheses = []
+        completed_hypothesis_scores = []
+
+        t = 0
+        while len(completed_hypotheses) < beam_size and t < args.decode_max_time_step:
+            t += 1
+            hyp_num = len(hypotheses)
+
+            expanded_src_encoding = src_encoding.expand(src_encoding.size(0), hyp_num, src_encoding.size(2))
+            expanded_src_encoding_att_linear = src_encoding_att_linear.expand(src_encoding_att_linear.size(0), hyp_num, src_encoding_att_linear.size(2))
+
+            y_tm1 = Variable(torch.LongTensor([hyp[-1] for hyp in hypotheses]), volatile=True)
+            if args.cuda:
+                y_tm1 = y_tm1.cuda()
+
+            y_tm1_embed = self.tgt_embed(y_tm1)
+
+            x = torch.cat([y_tm1_embed, att_tm1], 1)
+
+            # h_t: (hyp_num, hidden_size)
+            h_t, cell_t = self.decoder_lstm(x, hidden)
+            h_t = self.dropout(h_t)
+
+            ctx_t, alpha_t, temporal_att = self.dot_prod_temporal_attention_rel(h_t, temporal_att, expanded_src_encoding.permute(1, 0, 2), expanded_src_encoding_att_linear.permute(1, 0, 2),rel_scores)
+            # ctx_t, alpha_t = self.dot_prod_attention(h_t, expanded_src_encoding.permute(1, 0, 2), expanded_src_encoding_att_linear.permute(1, 0, 2))
+
+            att_t = F.tanh(self.att_vec_linear(torch.cat([h_t, ctx_t], 1)))
+            att_t = self.dropout(att_t)
+
+            score_t = self.readout(att_t)
+            p_t = F.log_softmax(score_t)
+
+            live_hyp_num = beam_size - len(completed_hypotheses)
+            new_hyp_scores = (hyp_scores.unsqueeze(1).expand_as(p_t) + p_t).view(-1)
+            top_new_hyp_scores, top_new_hyp_pos = torch.topk(new_hyp_scores, k=live_hyp_num)
+            prev_hyp_ids = top_new_hyp_pos / tgt_vocab_size
+            word_ids = top_new_hyp_pos % tgt_vocab_size
+            # new_hyp_scores = new_hyp_scores[top_new_hyp_pos.data]
+
+            new_hypotheses = []
+
+            live_hyp_ids = []
+            new_hyp_scores = []
+            for prev_hyp_id, word_id, new_hyp_score in zip(prev_hyp_ids.cpu().data, word_ids.cpu().data, top_new_hyp_scores.cpu().data):
+                hyp_tgt_words = hypotheses[prev_hyp_id] + [word_id]
+                if word_id == eos_id:
+                    completed_hypotheses.append(hyp_tgt_words)
+                    completed_hypothesis_scores.append(new_hyp_score)
+                else:
+                    new_hypotheses.append(hyp_tgt_words)
+                    live_hyp_ids.append(prev_hyp_id)
+                    new_hyp_scores.append(new_hyp_score)
+
+            if len(completed_hypotheses) == beam_size:
+                break
+
+            live_hyp_ids = torch.LongTensor(live_hyp_ids)
+            if args.cuda:
+                live_hyp_ids = live_hyp_ids.cuda()
+
+            hidden = (h_t[live_hyp_ids], cell_t[live_hyp_ids])
+            att_tm1 = att_t[live_hyp_ids]
+
+            hyp_scores = Variable(torch.FloatTensor(new_hyp_scores), volatile=True) # new_hyp_scores[live_hyp_ids]
+            if args.cuda:
+                hyp_scores = hyp_scores.cuda()
+            hypotheses = new_hypotheses
+
+        if len(completed_hypotheses) == 0:
+            completed_hypotheses = [hypotheses[0]]
+            completed_hypothesis_scores = [0.0]
+
+        if to_word:
+            for i, hyp in enumerate(completed_hypotheses):
+                completed_hypotheses[i] = [self.vocab.tgt.id2word[w] for w in hyp]
+
+    ## add length penalty
+        pos_scores = (np.array(completed_hypothesis_scores))
+        #print (pos_scores)
+        lengths = [ len(i) for i in completed_hypotheses  ]
+        lengths = np.array(lengths)
+        lengths = (5 + lengths)/(5 + 1)
+        #print (lengths)
+        pos_scores /= lengths
+        #print (pos_scores)
+        #print ('*' * 50)
+        completed_hypothesis_scores = pos_scores.tolist()
+
+
+        ranked_hypotheses = sorted(zip(completed_hypotheses, completed_hypothesis_scores), key=lambda x: x[1], reverse=True)
+
+        return [hyp for hyp, score in ranked_hypotheses]
+
     def sample(self, src_sents, sample_size=None, to_word=False):
         if not type(src_sents[0]) == list:
             src_sents = [src_sents]
@@ -595,7 +721,48 @@ class NMT(nn.Module):
 
         # temporal_att.append(att_weight)
 
+        # att_weight after softmax corresponds to alpha_t
+        att_weight = F.softmax(att_weight)
 
+        att_view = (att_weight.size(0), 1, att_weight.size(1))
+        # (batch_size, hidden_size)
+        ctx_vec = torch.bmm(att_weight.view(*att_view), src_encoding).squeeze(1)
+
+        return ctx_vec, att_weight, temporal_att
+
+
+    def dot_prod_temporal_attention_rel(self, h_t, temporal_att, src_encoding, src_encoding_att_linear, rel_scores, mask=None):
+        """
+        :param h_t: (batch_size, hidden_size)
+        :param src_encoding: (batch_size, src_sent_len, hidden_size * 2)
+        :param src_encoding_att_linear: (batch_size, src_sent_len, hidden_size)
+        :param mask: (batch_size, src_sent_len)
+        :param temporal_att: (batch_size, src_sent_len, time_steps_seen)
+        :param rel_scores: (batch_size,src_sent_len)
+        """
+        # (batch_size, src_sent_len)
+        att_weight = torch.bmm(src_encoding_att_linear, h_t.unsqueeze(2)).squeeze(2)
+        if mask:
+            att_weight.data.masked_fill_(mask, -float('inf'))
+        # att_weight before softmax corresponds to e_ti
+
+        # add intra-temporal attention here, get e_ti^' from e_ti
+        att_weight = torch.exp(att_weight)
+
+        if len(temporal_att) == 0:
+            temporal_att.append(att_weight)
+            temporal_att = torch.stack(temporal_att)
+        else:
+            att_denominator = temporal_att.sum(0)
+            att_weight = torch.div(att_weight, att_denominator)
+            temporal_att = torch.cat((temporal_att, att_weight.unsqueeze(0)), 0)
+
+        # temporal_att.append(att_weight)
+
+        #Adding relevance weight to the att_weight by simple product
+        # att_weight remains (batch_size, src_sent_len)
+        att_weight = torch.mul(att_weight,rel_scores)
+        
         # att_weight after softmax corresponds to alpha_t
         att_weight = F.softmax(att_weight)
 
@@ -1602,7 +1769,7 @@ def interactive(args):
     while True:
         src_sent = raw_input('Source Sentence:')
         src_sent = src_sent.strip().split(' ')
-        hyps = model.translate(src_sent)
+        hyps = model.translate_rel(src_sent,rel_score)
         for i, hyp in enumerate(hyps, 1):
             print('Hypothesis #%d: %s' % (i, ' '.join(hyp)))
 
