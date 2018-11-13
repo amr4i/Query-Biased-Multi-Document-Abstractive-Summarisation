@@ -55,7 +55,7 @@ def getTempDoc(directory, file_list=None):
 				word_list = word_tokenize(sent)
 				filtered_words = [ps.stem(w) for w in word_list if not w in stop_words]
 				sent_vec = {}
-				total_num_sent +=1
+				total_num_sent += 1
 				
 				for word in filtered_words:
 					if not word in corpus:
