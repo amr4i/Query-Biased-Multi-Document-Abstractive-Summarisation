@@ -90,6 +90,7 @@ class IndexFiles(object):
                     print "Failed in indexDocs:", e
 
 def indexing(directory):
+    # lucene.initVM(classpath=lucene.CLASSPATH)
     lucene.initVM(vmargs=['-Djava.awt.headless=true'])
     print 'lucene', lucene.VERSION
     start = datetime.now()

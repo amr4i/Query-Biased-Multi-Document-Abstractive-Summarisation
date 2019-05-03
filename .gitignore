@@ -1,2 +1,5 @@
 *.txt
 *.txt~
+./articles/*
+*.pyc
+*.swp

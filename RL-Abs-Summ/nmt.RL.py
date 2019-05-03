@@ -160,6 +160,7 @@ class NMT(nn.Module):
         """
         # (src_sent_len, batch_size, embed_size)
         src_word_embed = self.src_embed(src_sents)
+        #################################################
         packed_src_embed = pack_padded_sequence(src_word_embed, src_sents_len)
 
         # output: (src_sent_len, batch_size, num_dir*hidden_size)
@@ -363,6 +364,9 @@ class NMT(nn.Module):
         hypotheses = [[bos_id]]
         completed_hypotheses = []
         completed_hypothesis_scores = []
+
+        temporal_att = []
+
 
         t = 0
         while len(completed_hypotheses) < beam_size and t < args.decode_max_time_step:
@@ -1709,6 +1713,7 @@ def test(args):
         params = torch.load(args.load_model, map_location=lambda storage, loc: storage)
         vocab = params['vocab']
         saved_args = params['args']
+        print(saved_args.batch_size)
         state_dict = params['state_dict']
 
         model = NMT(saved_args, vocab)

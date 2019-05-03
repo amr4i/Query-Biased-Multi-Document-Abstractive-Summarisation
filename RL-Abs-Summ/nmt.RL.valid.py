@@ -975,8 +975,8 @@ def RL_train(args):
 	    #print ('----------')
 
 	    if args.cuda:
-		reward_RL_sample = reward_RL_sample.cuda()
-		reward_RL_base = reward_RL_base.cuda()
+		    reward_RL_sample = reward_RL_sample.cuda()
+		    reward_RL_base = reward_RL_base.cuda()
 	    
 	    word_loss = cross_entropy_loss( scores.view(-1, scores.size(2)), sample_y.view(-1) ).view(scores.size(0), scores.size(1),1)
 	    word_loss = -word_loss * (reward_RL_base - reward_RL_sample) # + word_loss
