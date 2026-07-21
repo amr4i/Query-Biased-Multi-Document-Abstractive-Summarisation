@@ -25,7 +25,7 @@ def clean_lines(line):
 
 	line = sentencify(line)
 	line = line.replace('<s>','')
-	line = line.replace('<\s>',' delimmqm')		# delimmqm is random to ensure non-occurence in text
+	line = line.replace('<\s>',' delimmqm')		# delimmqm is random to ensure non-occurrence in text
 	print(line)
 
 	# tokenize on white space
